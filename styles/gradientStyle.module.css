@@ -1,0 +1,6 @@
+.line {
+    background-image: linear-gradient(to right, #AE23A9, #DC4E1B);
+    display: flex;
+    margin-bottom: 20px;
+    height: 5px;
+}
