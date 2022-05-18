@@ -1,0 +1,6 @@
+.tfContainer {
+    border-width: 10px;
+    border-color: #4A4A4A;
+    display: flex;
+    background-color: aqua;
+}
