@@ -1,0 +1,46 @@
+.titleList{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #4A4A4A;
+}
+
+.listContainer {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    max-width: 100%;
+}
+
+.listDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+.imageDiv {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.nameDiv {
+    position: absolute;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.nameStyle{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #F9F9F9;
+}

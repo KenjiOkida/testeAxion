@@ -1,9 +1,17 @@
 import '../styles/globals.css'
 import Router from 'next/router'
 import { parseCookies } from 'nookies'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return(<>
+    <Head>
+      <title>ORANGE</title>
+      <link rel="icon" href="https://m3-static.marvelapp.com/favicon.ico" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet" />
+    </Head>
+    <Component {...pageProps} />
+  </>) 
 }
 
 export default MyApp

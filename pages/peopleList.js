@@ -2,19 +2,24 @@ import Navbar from "../components/navbar";
 import GradientLine from "../components/gradientLine";
 import { parseCookies } from "nookies";
 import { fetcher } from "../lib/api";
+import ListItem from "../components/listItem";
+import styles from "../styles/listStyle.module.css"
 
 const PeopleList = ({ people }) => {
     return(<>
-        <Navbar />
-        <div className="listContent">
-            <p>LIST OF PEOPLE</p>
+        <Navbar itemSelected='people' />
+        <div className={styles.listContainer}>
+            <div className={styles.titleList}>
+                LIST OF PEOPLE
+            </div>
             <GradientLine />
-            {people.map(person => (
-                <div key={person.id}>
-                    <h3>{person.name}</h3>
-                    <p dangerouslySetInnerHTML={{ __html: person.link.url}} />
-                </div>
-            ))}
+            <div className={styles.listDiv}>
+                {people.map(person => (
+                    <div key={person.id}>
+                        <ListItem item={person} />
+                    </div>
+                ))}
+            </div>
         </div>
     </>);
 }

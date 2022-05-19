@@ -1,22 +1,27 @@
-import Navbar from "../components/navbar";
-import GradientLine from "../components/gradientLine";
-import { fetcher } from "../lib/api";
-import { parseCookies } from "nookies";
+import Navbar from "../components/navbar"
+import GradientLine from "../components/gradientLine"
+import { fetcher } from "../lib/api"
+import { parseCookies } from "nookies"
+import ListItem from "../components/listItem"
+import styles from "../styles/listStyle.module.css"
 
 const FoodsList = ({ foods }) => {
     console.log(foods)
     
     return(<>
-        <Navbar />
-        <div className="listContent">
-            <p>LIST OF FOODS</p>
+        <Navbar itemSelected='foods'/>
+        <div className={styles.listContainer}>
+            <div className={styles.titleList}>
+                LIST OF FOODS
+            </div>
             <GradientLine />
-            {foods.map(food => (
-                <div key={food.id}>
-                    <h3>{food.name}</h3>
-                    <p dangerouslySetInnerHTML={{ __html: food.link.formats.thumbnail.name}} />
-                </div>
-            ))}
+            <div className={styles.listDiv}>
+                {foods.map(food => (
+                    <div key={food.id}>
+                        <ListItem item={food} />
+                    </div>
+                ))}
+            </div>
         </div>
     </>);
 }
